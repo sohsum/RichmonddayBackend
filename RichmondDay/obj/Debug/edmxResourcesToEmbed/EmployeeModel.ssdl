@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="richmondDayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MOCK_DATA">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="first_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="last_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="email" Type="nvarchar" MaxLength="255" />
+    <Property Name="emp_id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="richmondDayModelStoreContainer">
+    <EntitySet Name="MOCK_DATA" EntityType="Self.MOCK_DATA" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

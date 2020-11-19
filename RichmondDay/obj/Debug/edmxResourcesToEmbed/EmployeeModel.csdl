@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="richmondDayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MOCK_DATA">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="first_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="emp_id" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="richmondDayEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MOCK_DATA" EntityType="Self.MOCK_DATA" />
+  </EntityContainer>
+</Schema>
